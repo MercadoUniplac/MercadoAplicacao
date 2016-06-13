@@ -7,11 +7,8 @@ namespace Uniplac.Mercado.Dominio
 {
     public class ItemVenda
     {
-        public Produto Produto
-        {
-            get;
-            set;
-        }
+        public int Id { get; set; }
+        public Produto Produto { get; set; }
 
         public int Qtd { get; set; }
 
