@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contratos\IItemVendaRepository.cs" />
+    <Compile Include="Contratos\IProdutoRepository.cs" />
+    <Compile Include="Contratos\IVendaRepository.cs" />
     <Compile Include="ItemVenda.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
