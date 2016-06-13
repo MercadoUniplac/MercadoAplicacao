@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Apresentação", "1. Apresentação", "{115F795E-E66F-4F69-A2EF-36545F236057}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Aplicação", "2. Aplicação", "{F9D66C5F-4438-4BD5-85A1-9AA26B2F4558}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Dominio", "3. Dominio", "{DAE2ADFD-3D54-4D6E-878C-889BE2F9C94B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infraestrutura", "4. Infraestrutura", "{CE4DDD10-A55B-437D-BFFE-0BFCDF41E33A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Dominio", "Uniplac.Mercado.Dominio\Uniplac.Mercado.Dominio.csproj", "{78B76B6C-7AFD-4030-98C1-A08320D50AD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Dominio.Testes", "Uniplac.Mercado.Dominio.Testes\Uniplac.Mercado.Dominio.Testes.csproj", "{BA9FD2CF-54EE-4FCD-9798-9D1B82386172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Aplicacao.Testes", "Uniplac.Mercado.Aplicacao.Testes\Uniplac.Mercado.Aplicacao.Testes.csproj", "{58F9993E-2B0D-49C9-807B-622A29E8B780}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Aplicacao", "Uniplac.Mercado.Aplicacao\Uniplac.Mercado.Aplicacao.csproj", "{0DD7B070-DBCA-46E4-8979-A4461B448C54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Infra.Dados", "Uniplac.Mercado.Infra.Dados\Uniplac.Mercado.Infra.Dados.csproj", "{CD10123F-D49D-494A-AF0E-94155DC3860B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Infra.Framework", "Uniplac.Mercado.Infra.Framework\Uniplac.Mercado.Infra.Framework.csproj", "{543125CA-C130-4ECF-B0A5-FECC10CF506A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Infra.Testes", "Uniplac.Mercado.Infra.Testes\Uniplac.Mercado.Infra.Testes.csproj", "{32B7F03D-DCF0-4701-8AE2-1FB83A99FBA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Apresentacao.Web", "Uniplac.Mercado.Apresentacao.Web\Uniplac.Mercado.Apresentacao.Web.csproj", "{61F83452-6C1B-441F-B564-CECB2EBBEC61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78B76B6C-7AFD-4030-98C1-A08320D50AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78B76B6C-7AFD-4030-98C1-A08320D50AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78B76B6C-7AFD-4030-98C1-A08320D50AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78B76B6C-7AFD-4030-98C1-A08320D50AD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA9FD2CF-54EE-4FCD-9798-9D1B82386172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA9FD2CF-54EE-4FCD-9798-9D1B82386172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA9FD2CF-54EE-4FCD-9798-9D1B82386172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA9FD2CF-54EE-4FCD-9798-9D1B82386172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58F9993E-2B0D-49C9-807B-622A29E8B780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58F9993E-2B0D-49C9-807B-622A29E8B780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58F9993E-2B0D-49C9-807B-622A29E8B780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58F9993E-2B0D-49C9-807B-622A29E8B780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DD7B070-DBCA-46E4-8979-A4461B448C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD7B070-DBCA-46E4-8979-A4461B448C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD7B070-DBCA-46E4-8979-A4461B448C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD7B070-DBCA-46E4-8979-A4461B448C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD10123F-D49D-494A-AF0E-94155DC3860B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD10123F-D49D-494A-AF0E-94155DC3860B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD10123F-D49D-494A-AF0E-94155DC3860B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD10123F-D49D-494A-AF0E-94155DC3860B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543125CA-C130-4ECF-B0A5-FECC10CF506A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543125CA-C130-4ECF-B0A5-FECC10CF506A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543125CA-C130-4ECF-B0A5-FECC10CF506A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543125CA-C130-4ECF-B0A5-FECC10CF506A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B7F03D-DCF0-4701-8AE2-1FB83A99FBA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B7F03D-DCF0-4701-8AE2-1FB83A99FBA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B7F03D-DCF0-4701-8AE2-1FB83A99FBA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B7F03D-DCF0-4701-8AE2-1FB83A99FBA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F83452-6C1B-441F-B564-CECB2EBBEC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F83452-6C1B-441F-B564-CECB2EBBEC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F83452-6C1B-441F-B564-CECB2EBBEC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F83452-6C1B-441F-B564-CECB2EBBEC61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78B76B6C-7AFD-4030-98C1-A08320D50AD0} = {DAE2ADFD-3D54-4D6E-878C-889BE2F9C94B}
+		{BA9FD2CF-54EE-4FCD-9798-9D1B82386172} = {DAE2ADFD-3D54-4D6E-878C-889BE2F9C94B}
+		{58F9993E-2B0D-49C9-807B-622A29E8B780} = {F9D66C5F-4438-4BD5-85A1-9AA26B2F4558}
+		{0DD7B070-DBCA-46E4-8979-A4461B448C54} = {F9D66C5F-4438-4BD5-85A1-9AA26B2F4558}
+		{CD10123F-D49D-494A-AF0E-94155DC3860B} = {CE4DDD10-A55B-437D-BFFE-0BFCDF41E33A}
+		{543125CA-C130-4ECF-B0A5-FECC10CF506A} = {CE4DDD10-A55B-437D-BFFE-0BFCDF41E33A}
+		{32B7F03D-DCF0-4701-8AE2-1FB83A99FBA3} = {CE4DDD10-A55B-437D-BFFE-0BFCDF41E33A}
+		{61F83452-6C1B-441F-B564-CECB2EBBEC61} = {115F795E-E66F-4F69-A2EF-36545F236057}
+	EndGlobalSection
+EndGlobal
