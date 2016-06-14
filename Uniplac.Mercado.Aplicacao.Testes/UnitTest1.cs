@@ -36,14 +36,15 @@ namespace Uniplac.Mercado.Aplicacao.Testes
             produto.Preco = 4.90;
 
 
-      
+
             var repositorioFake = new Mock<IProdutoRepository>();
             repositorioFake.Setup(x => x.Buscar(1)).Returns(new Produto()
             {
                 Nome = "Arroz",
                 Preco = 4.90,
-                Id = 1;
-            }
-                
+                Id = 1
+            });
         }
+    }
 }
+       
