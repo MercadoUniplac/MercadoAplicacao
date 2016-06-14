@@ -9,8 +9,28 @@ using Uniplac.Mercado.Aplicacao.Serviço;
 namespace Uniplac.Mercado.Aplicacao.Testes
 {
     [TestClass]
-    public class UnitTest1
+    public class ProdutoAplicacaoTeste
     {
+
+        [TestMethod]
+
+        public void AtualizarProdutoAplicacaoTeste()
+        {
+            //Monta objeto
+            Produto produto = new Produto();
+            produto.Nome = "Arroz";
+            produto.Preco = 4.90;
+
+            var repositorioFake = new Mock<IProdutoRepository>();
+            repositorioFake.Setup(x => x.Atualizar(produto)).Returns(produto);
+            IProdutoAplicacao servico = new ProdutoAplicacao(repositorioFake.Object);
+
+
+            Produto novoProduto = servico.Atualizar(produto);
+
+            repositorioFake.Verify(x => x.Atualizar(novoProduto));
+
+        }
         [TestMethod]
         public void CriarProdutoNaAplicacaoTeste()
         {
@@ -34,8 +54,7 @@ namespace Uniplac.Mercado.Aplicacao.Testes
             Produto produto = new Produto();
             produto.Nome = "Arroz";
             produto.Preco = 4.90;
-
-
+            
 
             var repositorioFake = new Mock<IProdutoRepository>();
             repositorioFake.Setup(x => x.Buscar(1)).Returns(new Produto()
@@ -45,6 +64,26 @@ namespace Uniplac.Mercado.Aplicacao.Testes
                 Id = 1
             });
         }
+
+        [TestMethod]
+        public void DeleteProdutoAplicacaoTeste()
+        {
+
+            Produto produto = new Produto();
+            produto.Nome = "Pilsen";
+            produto.Preco = 4.90;
+            
+            var repositorioFake = new Mock<IProdutoRepository>();
+            repositorioFake.Setup(x => x.Deletar(produto));
+
+            IProdutoAplicacao servico = new ProdutoAplicacao(repositorioFake.Object);
+            Produto produtoDeletado = servico.Deletar(produto);
+
+            repositorioFake.Verify(x => x.Deletar(produtoDeletado));
+
+        }
+
+
     }
 }
-       
+

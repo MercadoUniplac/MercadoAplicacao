@@ -58,7 +58,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="ItemVendaAplicacaoTeste.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProdutoAplicacaoTeste.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -40,8 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Contrato\IItemVendaAplicacao.cs" />
     <Compile Include="Contrato\IProdutoAplicacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serviço\ItemVendaAplicacao.cs" />
     <Compile Include="Serviço\ProdutoAplicacao.cs" />
   </ItemGroup>
   <ItemGroup />

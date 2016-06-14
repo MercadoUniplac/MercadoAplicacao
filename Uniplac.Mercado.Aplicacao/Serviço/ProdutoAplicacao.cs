@@ -17,10 +17,10 @@ namespace Uniplac.Mercado.Aplicacao.Serviço
         {
             this._repositorio = repositorio;
         }
+
         public Produto Atualizar(Produto produto)
         {
             Produto produtoAtualizado = _repositorio.Atualizar(produto);
-
 
             return produtoAtualizado;
         }
@@ -33,12 +33,13 @@ namespace Uniplac.Mercado.Aplicacao.Serviço
 
         public Produto CriarProduto(Produto produto)
         {
-            throw new NotImplementedException();
+            return _repositorio.Adicionar(produto);
         }
 
         public Produto Deletar(Produto produto)
         {
-            throw new NotImplementedException();
+            _repositorio.Deletar(produto);
+            return produto;
         }
     }
 }

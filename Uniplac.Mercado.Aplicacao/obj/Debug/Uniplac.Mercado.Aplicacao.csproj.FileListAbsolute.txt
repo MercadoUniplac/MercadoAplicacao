@@ -1,7 +1,7 @@
-C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Aplicacao.dll
-C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Aplicacao.pdb
-C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.csprojResolveAssemblyReference.cache
-C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.dll
-C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.pdb
-C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Dominio.dll
-C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\Luana\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Aplicacao.dll
+C:\Users\Luana\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Aplicacao.pdb
+C:\Users\Luana\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Dominio.dll
+C:\Users\Luana\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\Luana\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\Luana\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.dll
+C:\Users\Luana\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.pdb
