@@ -1,0 +1,4 @@
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Framework\bin\Debug\Uniplac.Mercado.Infra.Framework.dll
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Framework\bin\Debug\Uniplac.Mercado.Infra.Framework.pdb
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Framework\obj\Debug\Uniplac.Mercado.Infra.Framework.dll
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Framework\obj\Debug\Uniplac.Mercado.Infra.Framework.pdb

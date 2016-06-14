@@ -1,0 +1,12 @@
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\bin\Debug\Uniplac.Mercado.Infra.Dados.dll.config
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\bin\Debug\Uniplac.Mercado.Infra.Dados.dll
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\bin\Debug\Uniplac.Mercado.Infra.Dados.pdb
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\bin\Debug\EntityFramework.dll
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\bin\Debug\Uniplac.Mercado.Dominio.dll
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\bin\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\bin\Debug\EntityFramework.xml
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\obj\Debug\Uniplac.Mercado.Infra.Dados.csprojResolveAssemblyReference.cache
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\obj\Debug\Uniplac.Mercado.Infra.Dados.dll
+C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Dados\obj\Debug\Uniplac.Mercado.Infra.Dados.pdb
