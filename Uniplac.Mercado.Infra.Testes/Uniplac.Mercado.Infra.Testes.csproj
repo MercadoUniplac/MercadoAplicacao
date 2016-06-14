@@ -57,12 +57,26 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="ProdutoDadosTeste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Uniplac.Mercado.Dominio\Uniplac.Mercado.Dominio.csproj">
+      <Project>{78b76b6c-7afd-4030-98c1-a08320d50ad0}</Project>
+      <Name>Uniplac.Mercado.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uniplac.Mercado.Infra.Dados\Uniplac.Mercado.Infra.Dados.csproj">
+      <Project>{cd10123f-d49d-494a-af0e-94155dc3860b}</Project>
+      <Name>Uniplac.Mercado.Infra.Dados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uniplac.Mercado.Infra.Framework\Uniplac.Mercado.Infra.Framework.csproj">
+      <Project>{543125ca-c130-4ecf-b0a5-fecc10cf506a}</Project>
+      <Name>Uniplac.Mercado.Infra.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
