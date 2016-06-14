@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Infra.Frame
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Infra.Testes", "Uniplac.Mercado.Infra.Testes\Uniplac.Mercado.Infra.Testes.csproj", "{32B7F03D-DCF0-4701-8AE2-1FB83A99FBA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Apresentacao.Web", "Uniplac.Mercado.Apresentacao.Web\Uniplac.Mercado.Apresentacao.Web.csproj", "{61F83452-6C1B-441F-B564-CECB2EBBEC61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.Mercado.Apresentacao.Webforms", "Uniplac.Mercado.Apresentacao.Webforms\Uniplac.Mercado.Apresentacao.Webforms.csproj", "{356DFA88-FAFC-45B7-A284-7C03EC4B9D52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,10 +61,10 @@ Global
 		{32B7F03D-DCF0-4701-8AE2-1FB83A99FBA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32B7F03D-DCF0-4701-8AE2-1FB83A99FBA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32B7F03D-DCF0-4701-8AE2-1FB83A99FBA3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61F83452-6C1B-441F-B564-CECB2EBBEC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61F83452-6C1B-441F-B564-CECB2EBBEC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61F83452-6C1B-441F-B564-CECB2EBBEC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61F83452-6C1B-441F-B564-CECB2EBBEC61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{356DFA88-FAFC-45B7-A284-7C03EC4B9D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356DFA88-FAFC-45B7-A284-7C03EC4B9D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356DFA88-FAFC-45B7-A284-7C03EC4B9D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356DFA88-FAFC-45B7-A284-7C03EC4B9D52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +77,6 @@ Global
 		{CD10123F-D49D-494A-AF0E-94155DC3860B} = {CE4DDD10-A55B-437D-BFFE-0BFCDF41E33A}
 		{543125CA-C130-4ECF-B0A5-FECC10CF506A} = {CE4DDD10-A55B-437D-BFFE-0BFCDF41E33A}
 		{32B7F03D-DCF0-4701-8AE2-1FB83A99FBA3} = {CE4DDD10-A55B-437D-BFFE-0BFCDF41E33A}
-		{61F83452-6C1B-441F-B564-CECB2EBBEC61} = {115F795E-E66F-4F69-A2EF-36545F236057}
+		{356DFA88-FAFC-45B7-A284-7C03EC4B9D52} = {115F795E-E66F-4F69-A2EF-36545F236057}
 	EndGlobalSection
 EndGlobal
