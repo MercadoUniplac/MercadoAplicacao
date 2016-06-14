@@ -4,6 +4,7 @@ using System.Data.Entity;
 using Uniplac.Mercado.Infra.Dados.Contexto;
 using Uniplac.Mercado.Infra.Dados.Repositorios;
 using Uniplac.Mercado.Dominio;
+using System.Collections.Generic;
 
 namespace Uniplac.Mercado.Infra.Testes
 {
@@ -61,6 +62,16 @@ namespace Uniplac.Mercado.Infra.Testes
 
             // Assert - verifica se puxou o bagulho lá
             Assert.IsNotNull(produto);
+        }
+
+        [TestMethod]
+        public void RetornaTodosOsProdutosRepositorioTeste()
+        {
+            // Action - busca no banco
+            List<Produto> produtos = _repositorio.BuscarTodos();
+
+            // Assert - verificar se obteve os produtos
+            Assert.AreEqual(10, produtos.Count);
         }
     }
 }
