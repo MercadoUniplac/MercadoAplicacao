@@ -3,3 +3,8 @@ C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio\bin\Debug\U
 C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.csprojResolveAssemblyReference.cache
 C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.dll
 C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio\bin\Debug\Uniplac.Mercado.Dominio.dll
+C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio\bin\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.dll
+C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.pdb
