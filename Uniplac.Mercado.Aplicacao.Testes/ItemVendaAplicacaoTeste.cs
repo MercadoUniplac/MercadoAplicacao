@@ -48,5 +48,44 @@ namespace Uniplac.Mercado.Aplicacao.Testes
             IItemVendaAplicacao servico = new ItemVendaAplicacao(repositorioFake.Object);
 
         }
+
+        [TestMethod]
+        public void BuscaItemVendaAplicacaoTeste()
+        {
+            //Monta objeto
+            ItemVenda itemVenda = new ItemVenda();
+            itemVenda.Produto = new Produto();
+            itemVenda.Qtd= 4;
+
+
+            var repositorioFake = new Mock<IItemVendaRepository>();
+            repositorioFake.Setup(x => x.Buscar(1)).Returns(new ItemVenda()
+            {
+                Produto = itemVenda.Produto,
+                Qtd = itemVenda.Qtd,
+                Id = 1
+                
+            });
+        }
+
+        [TestMethod]
+        public void DeleteItemVendaAplicacaoTeste()
+        {
+
+            ItemVenda itemVenda = new ItemVenda();
+            itemVenda.Produto = new Produto();
+            itemVenda.Qtd = 4;
+
+            var repositorioFake = new Mock<IItemVendaRepository>();
+            repositorioFake.Setup(x => x.Deletar(itemVenda));
+
+            IItemVendaAplicacao servico = new ItemVendaAplicacao(repositorioFake.Object);
+            ItemVenda itemVendaDeletado = servico.Deletar(itemVenda);
+
+            repositorioFake.Verify(x => x.Deletar(itemVendaDeletado));
+
+        }
+
+
     }
 }
