@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Contexto\MercadoContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\ItemVendaRepository.cs" />
     <Compile Include="Repositorios\ProdutoRepository.cs" />
   </ItemGroup>
   <ItemGroup>

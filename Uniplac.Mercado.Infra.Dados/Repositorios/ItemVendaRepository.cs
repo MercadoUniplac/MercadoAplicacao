@@ -1,52 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Uniplac.Mercado.Dominio;
 using Uniplac.Mercado.Dominio.Contratos;
 using Uniplac.Mercado.Infra.Dados.Contexto;
 
 namespace Uniplac.Mercado.Infra.Dados.Repositorios
 {
-    public class ProdutoRepository : IProdutoRepository
+    public class ItemVendaRepository : IItemVendaRepository
     {
         private MercadoContext _contexto;
-
-        public ProdutoRepository()
+        public ItemVendaRepository()
         {
             _contexto = new MercadoContext();
         }
-
-        public Produto Adicionar(Produto produto)
+        public ItemVenda Adicionar(ItemVenda itemVenda)
         {
-            var resultado = _contexto.Produtos.Add(produto);
+            var resultado = _contexto.ItensVenda.Add(itemVenda);
             _contexto.SaveChanges();
             return resultado;
         }
 
-        public Produto Atualizar(Produto produto)
+        public ItemVenda Atualizar(ItemVenda itemVenda)
         {
-            var entry = _contexto.Entry<Produto>(produto);
+            var entry = _contexto.Entry<ItemVenda>(itemVenda);
             entry.State = System.Data.Entity.EntityState.Modified;
             _contexto.SaveChanges();
 
-            return produto;
+            return itemVenda;
         }
 
-        public Produto Buscar(int id)
+        public ItemVenda Buscar(int id)
         {
-            return _contexto.Produtos.Find(id);
+            return _contexto.ItensVenda.Find(id);
         }
 
-        public List<Produto> BuscarTodos()
+        public List<ItemVenda> BuscarTodos()
         {
-            return _contexto.Produtos.ToList();
+            return _contexto.ItensVenda.ToList();
         }
 
-        public void Deletar(Produto produto)
+        public void Deletar(ItemVenda itemVenda)
         {
-            var entry = _contexto.Entry<Produto>(produto);
+            var entry = _contexto.Entry<ItemVenda>(itemVenda);
             entry.State = System.Data.Entity.EntityState.Deleted;
             _contexto.SaveChanges();
         }

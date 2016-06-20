@@ -8,6 +8,15 @@ namespace Uniplac.Mercado.Dominio
 {
     public class ItemVenda
     {
+        public ItemVenda()
+        {
+
+        }
+        public ItemVenda(Produto produto, int qtd)
+        {
+            Produto = produto;
+            Qtd = qtd;
+        }
         public int Id { get; set; }
         public Produto Produto { get; set; }
 
