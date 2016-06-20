@@ -12,6 +12,6 @@ namespace Uniplac.Mercado.Dominio.Contratos
         Venda Buscar(int id);
         List<Venda> BuscarTodos();
         Venda Atualizar(Venda venda);
-        void Deletar(Venda venda); 
+        void Deletar(Venda venda);
     }
 }

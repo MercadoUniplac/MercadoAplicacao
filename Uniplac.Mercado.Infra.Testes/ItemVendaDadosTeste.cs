@@ -6,6 +6,7 @@ using System.Data.Entity;
 using Uniplac.Mercado.Infra.Dados.Repositorios;
 using Uniplac.Mercado.Dominio;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Uniplac.Mercado.Infra.Testes
 {
@@ -48,5 +49,25 @@ namespace Uniplac.Mercado.Infra.Testes
             Assert.AreEqual(novoItemVenda.Produto.Id, produto.Id);
             Assert.AreEqual(novoItemVenda.Qtd, 3);
         }
+
+        [TestMethod]
+        public void RetornarItemVendaRepositorioTeste()
+        {
+            // Buscar no banco
+            ItemVenda itemVenda = _repositorio.Buscar(1);
+            // Assert
+            Assert.IsNotNull(itemVenda);
+        }
+
+        [TestMethod]
+        public void RetornarTodosItensVendaRepositorioTeste()
+        {
+            // Buscar tudo no banco
+            List<ItemVenda> itensVenda = _repositorio.BuscarTodos();
+
+            // Assert
+            Assert.AreEqual(10, itensVenda.Count);
+        }
+
     }
 }

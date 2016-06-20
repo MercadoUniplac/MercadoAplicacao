@@ -7,6 +7,12 @@ namespace Uniplac.Mercado.Dominio
 {
     public class Venda
     {
+        public Venda(DateTime data, List<ItemVenda> itens)
+        {
+            Data = data;
+            Itens = itens;
+        }
+
 
         public int Id { get; set; }
 
