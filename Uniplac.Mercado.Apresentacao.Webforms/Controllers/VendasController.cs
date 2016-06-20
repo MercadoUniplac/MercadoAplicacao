@@ -62,7 +62,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
                 var venda = vendaModel.Venda;
                 for (int i = 0; i < vendaModel.NumItemVenda; i++)
                 {
-                    var produto = db.Produtos.Find(int.Parse(vendaModel.Produtos[i].Value));
+                    var produto = db.Produtos.Find(int.Parse(vendaModel.Produtos[i]));
                     venda.Itens.Add(new ItemVenda(produto, int.Parse(vendaModel.Qtds[i].Value)));
                 }
                 db.Venda.Add(venda);
@@ -113,7 +113,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
                 return RedirectToAction("Index");
             for (int i = 0; i < vendaModel.NumItemVenda; i++)
             {
-                var produto = db.Produtos.Find(int.Parse(vendaModel.Produtos[i].Value));
+                var produto = db.Produtos.Find(int.Parse(vendaModel.Produtos[i]));
                 vendaModel.Venda.Itens.Add(new ItemVenda(produto, int.Parse(vendaModel.Qtds[i].Value)));
             }
             vendaModel.Venda.Itens.Add(new ItemVenda());

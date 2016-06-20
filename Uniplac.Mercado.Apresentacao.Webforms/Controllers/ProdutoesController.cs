@@ -18,7 +18,6 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
     [Authorize]
     public class ProdutoesController : Controller
     {
-        private MercadoContext db = new MercadoContext();
         private IProdutoAplicacao servico = new ProdutoAplicacao(new ProdutoRepository());
 
         // GET: Produtoes
@@ -57,8 +56,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Produtos.Add(produto);
-                db.SaveChanges();
+                servico.CriarProduto(produto);
                 return RedirectToAction("Index");
             }
 
@@ -72,7 +70,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Produto produto = db.Produtos.Find(id);
+            Produto produto = servico.Busca(id.Value);
             if (produto == null)
             {
                 return HttpNotFound();
@@ -89,8 +87,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(produto).State = EntityState.Modified;
-                db.SaveChanges();
+                servico.Atualizar(produto);
                 return RedirectToAction("Index");
             }
             return View(produto);
@@ -103,7 +100,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Produto produto = db.Produtos.Find(id);
+            Produto produto = servico.Busca(id.Value);
             if (produto == null)
             {
                 return HttpNotFound();
@@ -116,19 +113,9 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Produto produto = db.Produtos.Find(id);
-            db.Produtos.Remove(produto);
-            db.SaveChanges();
+            Produto produto = servico.Busca(id);
+            servico.Deletar(produto);
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }

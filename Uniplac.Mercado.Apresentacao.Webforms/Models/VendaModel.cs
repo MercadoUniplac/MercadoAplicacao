@@ -11,7 +11,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Models
     {
         public Venda Venda { get; set; }
 
-        public List<SelectListItem> Produtos { get; set; }
+        public List<string> Produtos { get; set; }
 
         public List<SelectListItem> Qtds { get; set; }
 
@@ -33,16 +33,13 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Models
             this.Venda = venda;
             this.TotalVenda = venda.ObterTotalVenda();
             TotalItemVenda = new List<double>();
-            Produtos = new List<SelectListItem>();
+            Produtos = new List<string>();
             Qtds = new List<SelectListItem>();
             NumItemVenda = venda.Itens.Count;
             foreach (var item in venda.Itens)
             {
                 TotalItemVenda.Add(item.ObterSubTotal());
-                Produtos.Add(new SelectListItem()
-                {
-                    Value = item.Produto.Id.ToString()
-                });
+                Produtos.Add(item.Produto.Id.ToString());
                 Qtds.Add(new SelectListItem()
                 {
                     Value = item.Qtd.ToString()

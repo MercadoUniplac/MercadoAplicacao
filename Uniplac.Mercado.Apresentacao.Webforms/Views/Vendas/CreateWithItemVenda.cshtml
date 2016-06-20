@@ -65,13 +65,16 @@
             </div>
         </section>
         <section class="form-group">
-            @Html.HiddenFor(x => Model.NumItemVenda);
+            @for (int i = 0; i < Model.Produtos.Count; i++)
+            {
+                @Html.HiddenFor(model => Model.Produtos[i])
+            }
+            @Html.HiddenFor(x => Model.NumItemVenda)
             @for (int i = 0; i < Model.NumItemVenda; i++)
             {
-                @Html.HiddenFor(x => Model.Qtds[i].Value)
-                @Html.HiddenFor(x => Model.Produtos[i].Value)
-
+                @Html.HiddenFor(model => Model.Qtds[i].Value)
             }
+        
         </section>
         <section class="form-group">
             <label class="control-label  col-sm-1"> Total da Venda</label>
@@ -95,12 +98,3 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
-<script>
-    window.onbeforeunload = onClose;
-    function onClose() {
-        $.ajax({
-            url: "/onclose",
-            async: false
-        });
-    }
-</script>
