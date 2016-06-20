@@ -15,6 +15,7 @@ namespace Uniplac.Mercado.Infra.Testes
         private MercadoContext _contextoTeste;
         private IItemVendaRepository _repositorio;
 
+
         [TestInitialize]
         public void Initialize()
         {

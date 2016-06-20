@@ -12,7 +12,7 @@ namespace Uniplac.Mercado.Infra.Dados.Configurations
     {
         public VendaConfiguration()
         {
-            HasMany(v => v.Itens).WithRequired().WillCascadeOnDelete(true);
+            HasMany(v => v.Itens).WithOptional().WillCascadeOnDelete(true);
         }
     }
 }
