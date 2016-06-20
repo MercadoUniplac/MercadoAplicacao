@@ -260,6 +260,7 @@
     <Content Include="Views\Vendas\Index.cshtml" />
     <Content Include="Views\Vendas\ModifyItemVenda.cshtml" />
     <Content Include="Views\Vendas\CreateWithItemVenda.cshtml" />
+    <Content Include="Views\Vendas\ModifyItemVendaModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

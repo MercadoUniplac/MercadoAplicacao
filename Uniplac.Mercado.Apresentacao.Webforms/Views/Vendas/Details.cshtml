@@ -1,26 +1,75 @@
-﻿@model Uniplac.Mercado.Dominio.Venda
+﻿@model Uniplac.Mercado.Apresentacao.Webforms.Models.VendaModel
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Venda </h2>
+<hr />
 
-<div>
-    <h4>Venda</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Data)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Data)
-        </dd>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
 
-    </dl>
-</div>
+    <div class="form-horizontal">
+        <h5>Preencha os dados abaixo para cadastar a venda.</h5>
+        <hr />
+        <section class="form-group venda-create__data col-xs-12">
+            <label class="col-sm-1 control-label">Data</label>
+            @Html.DisplayFor(model => model.Venda.Data, new { htmlAttributes = new { @class = "col-sm-11 control-label" } })
+        </section>
+        <section class="form-group  venda-create__itens-venda col-xs-12">
+            <label class="control-label col-sm-1"> Itens da Venda</label>
+            <div class="col-sm-11">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                Produto
+                            </th>
+                            <th>
+                                Valor Unitário
+                            </th>
+                            <th>
+                                Qtd
+                            </th>
+                            <th>
+                                Subtotal
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (var i = 0; i < Model.Venda.Itens.Count; i++)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => Model.Venda.Itens[i].Produto.Nome)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => Model.Venda.Itens[i].Produto.Preco)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => Model.Venda.Itens[i].Qtd)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => Model.TotalItemVenda[i])
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="form-group">
+            <label class="control-label  col-sm-1"> Total da Venda</label>
+            <h1 class="text-success">
+                R$ @Html.DisplayFor(modelItem => Model.TotalVenda)
+            </h1>
+        </section>
+    </div>
+}
+
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

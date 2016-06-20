@@ -16,12 +16,10 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
     {
         private MercadoContext db = new MercadoContext();
 
-        private static Venda vendaCache;
-
         // GET: Vendas
         public ActionResult Index()
         {
-            return View(db.Venda.ToList());
+            return View(db.Venda.Include(v => v.Itens).ToList());
         }
 
         // GET: Vendas/Details/5
@@ -31,12 +29,18 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Venda venda = db.Venda.Find(id);
+            Venda venda = db.Venda.Include(v => v.Itens).Where(v => v.Id == id).FirstOrDefault();
+            for (int i = 0; i < venda.Itens.Count; i++)
+            {
+                var idItem = venda.Itens[i].Id;
+                venda.Itens[i] = db.ItensVenda.Include(itv => itv.Produto).Where(itv => itv.Id == idItem).FirstOrDefault();
+            }
             if (venda == null)
             {
                 return HttpNotFound();
             }
-            return View(venda);
+            var model = new VendaModel(venda);
+            return View(model);
         }
 
         // GET: Vendas/Create
@@ -50,26 +54,31 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
         // POST: Vendas/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Data")] Venda venda)
+        public ActionResult Create(VendaModel vendaModel)
         {
             if (ModelState.IsValid)
             {
-                venda.Itens = vendaCache.Itens;
+                var venda = vendaModel.Venda;
+                for (int i = 0; i < vendaModel.NumItemVenda; i++)
+                {
+                    var produto = db.Produtos.Find(int.Parse(vendaModel.Produtos[i].Value));
+                    venda.Itens.Add(new ItemVenda(produto, int.Parse(vendaModel.Qtds[i].Value)));
+                }
                 db.Venda.Add(venda);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            return View(venda);
+            return View(vendaModel);
         }
 
         public ActionResult CreateWithItemVenda(ModifyItemVendaModel itemVendaModel)
         {
-            if (vendaCache == null)
+            var venda = itemVendaModel.Venda;
+            if (venda == null)
                 return RedirectToAction("Index");
-            vendaCache.Itens[vendaCache.Itens.Count - 1].Qtd = itemVendaModel.Qtd;
-            vendaCache.Itens[vendaCache.Itens.Count - 1].Produto = db.Produtos.Find(itemVendaModel.IdProdutoSelecionado);
-            return View(vendaCache);
+            venda.Itens[venda.Itens.Count - 1].Qtd = itemVendaModel.Qtd;
+            venda.Itens[venda.Itens.Count - 1].Produto = db.Produtos.Find(int.Parse(itemVendaModel.IdProdutoSelecionado));
+            return View(new VendaModel(venda));
 
         }
 
@@ -92,27 +101,24 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
         {
             if (venda == null)
                 return RedirectToAction("Index");
-            if (vendaCache != null)
-                venda.Itens = vendaCache.Itens;
             venda.Itens.Add(new ItemVenda());
-            var model = new ModifyItemVendaModel();
-            vendaCache = venda;
-            var produtos = db.Produtos.ToList();
-            model.Produtos = new List<SelectListItem>();
-            foreach (var produto in produtos)
-            {
-                var item = new SelectListItem()
-                {
-                    Text = produto.Nome,
-                    Value = produto.Id.ToString(),
-                    Selected = model.Produtos.Count == 0
-                };
-                model.Produtos.Add(item);
-            }
-
+            var model = new ModifyItemVendaModel(venda, db.Produtos.ToList());
             return View(model);
         }
 
+        public ActionResult ModifyItemVendaModel(VendaModel vendaModel)
+        {
+            if (vendaModel.Venda == null)
+                return RedirectToAction("Index");
+            for (int i = 0; i < vendaModel.NumItemVenda; i++)
+            {
+                var produto = db.Produtos.Find(int.Parse(vendaModel.Produtos[i].Value));
+                vendaModel.Venda.Itens.Add(new ItemVenda(produto, int.Parse(vendaModel.Qtds[i].Value)));
+            }
+            vendaModel.Venda.Itens.Add(new ItemVenda());
+            var model = new ModifyItemVendaModel(vendaModel.Venda, db.Produtos.ToList());
+            return View(model);
+        }
 
 
         // POST: Vendas/Edit/5

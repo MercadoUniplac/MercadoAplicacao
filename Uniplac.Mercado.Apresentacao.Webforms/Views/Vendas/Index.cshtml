@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Uniplac.Mercado.Dominio.Venda>
 
 @{
-    ViewBag.Title = "Vendas";
+    ViewBag.Title = "Lista de Vendas";
 }
 
-<h2>Index</h2>
+<h2>Lista de Vendas</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -13,6 +13,9 @@
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Data)
+        </th>
+        <th>
+            Número de Itens
         </th>
         <th></th>
     </tr>
@@ -23,8 +26,11 @@
             @Html.DisplayFor(modelItem => item.Data)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.DisplayFor(modelItem => item.Itens.Count)
+        </td>
+        <td>
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
