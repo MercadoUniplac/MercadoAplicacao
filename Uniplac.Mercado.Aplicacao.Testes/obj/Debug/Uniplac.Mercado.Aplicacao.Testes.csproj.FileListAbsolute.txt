@@ -13,6 +13,7 @@ C:\Users\Luana\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\bi
 C:\Users\Luana\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\obj\Debug\Uniplac.Mercado.Aplicacao.Testes.csprojResolveAssemblyReference.cache
 C:\Users\Luana\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\obj\Debug\Uniplac.Mercado.Aplicacao.Testes.dll
 C:\Users\Luana\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\obj\Debug\Uniplac.Mercado.Aplicacao.Testes.pdb
+C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\obj\Debug\Uniplac.Mercado.Aplicacao.Testes.csprojResolveAssemblyReference.cache
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\bin\Debug\Uniplac.Mercado.Aplicacao.Testes.dll
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\bin\Debug\Uniplac.Mercado.Aplicacao.Testes.pdb
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\bin\Debug\Castle.Core.dll
@@ -25,6 +26,5 @@ C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\bin\Debug\Castle.Core.xml
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\bin\Debug\Moq.xml
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
-C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\obj\Debug\Uniplac.Mercado.Aplicacao.Testes.csprojResolveAssemblyReference.cache
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\obj\Debug\Uniplac.Mercado.Aplicacao.Testes.dll
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Aplicacao.Testes\obj\Debug\Uniplac.Mercado.Aplicacao.Testes.pdb

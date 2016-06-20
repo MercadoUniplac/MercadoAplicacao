@@ -21,22 +21,5 @@ namespace Uniplac.Mercado.Dominio
         public string Nome { get; set; }
 
         public double Preco { get; set; }
-
-        public Produto()
-        {
-
-        }
-
-        public Produto(string nome, double preco)
-        {
-            this.Nome = nome;
-            this.Preco = preco;
-        }
-
-
-        public override string ToString()
-        {
-            return String.Format("{0}: R$ {1}", this.Nome, this.Preco);
-        }
     }
 }

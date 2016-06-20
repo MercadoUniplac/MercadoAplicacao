@@ -16,6 +16,7 @@ C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\bin\De
 C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\bin\Debug\Uniplac.Mercado.Infra.Dados.pdb
 C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\bin\Debug\Uniplac.Mercado.Infra.Framework.pdb
 C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\bin\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\obj\Debug\Uniplac.Mercado.Infra.Testes.csprojResolveAssemblyReference.cache
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\bin\Debug\Uniplac.Mercado.Infra.Testes.dll.config
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\bin\Debug\Uniplac.Mercado.Infra.Testes.dll
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\bin\Debug\Uniplac.Mercado.Infra.Testes.pdb
@@ -31,6 +32,5 @@ C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\bin\
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\bin\Debug\EntityFramework.xml
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
-C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\obj\Debug\Uniplac.Mercado.Infra.Testes.csprojResolveAssemblyReference.cache
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\obj\Debug\Uniplac.Mercado.Infra.Testes.dll
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Infra.Testes\obj\Debug\Uniplac.Mercado.Infra.Testes.pdb
