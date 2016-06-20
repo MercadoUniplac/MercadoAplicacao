@@ -5,6 +5,7 @@ using Uniplac.Mercado.Dominio.Contratos;
 using Moq;
 using Uniplac.Mercado.Aplicacao.Contrato;
 using Uniplac.Mercado.Aplicacao.Serviço;
+using System.Collections.Generic;
 
 namespace Uniplac.Mercado.Aplicacao.Testes
 {
@@ -43,7 +44,8 @@ namespace Uniplac.Mercado.Aplicacao.Testes
             repositorioFake.Setup(x => x.Adicionar(produto)).Returns(new Produto());
 
             IProdutoAplicacao servico = new ProdutoAplicacao(repositorioFake.Object);
-
+            servico.CriarProduto(produto);
+            repositorioFake.Verify(rep => rep.Adicionar(produto));
 
         }
 
@@ -54,7 +56,7 @@ namespace Uniplac.Mercado.Aplicacao.Testes
             Produto produto = new Produto();
             produto.Nome = "Arroz";
             produto.Preco = 4.90;
-            
+
 
             var repositorioFake = new Mock<IProdutoRepository>();
             repositorioFake.Setup(x => x.Buscar(1)).Returns(new Produto()
@@ -63,6 +65,25 @@ namespace Uniplac.Mercado.Aplicacao.Testes
                 Preco = 4.90,
                 Id = 1
             });
+            IProdutoAplicacao servico = new ProdutoAplicacao(repositorioFake.Object);
+            var produtoBuscado = servico.Busca(1);
+            repositorioFake.Verify(rep => rep.Buscar(1));
+        }
+
+        public void BuscaTodosProdutosAplicacaoTeste()
+        {
+            var repositorioFake = new Mock<IProdutoRepository>();
+            repositorioFake.Setup(x => x.BuscarTodos()).Returns(new List<Produto>() {
+                new Produto(){
+                    Nome = "Arroz",
+                    Preco = 4.90,
+                    Id = 1
+                }
+            });
+            IProdutoAplicacao servico = new ProdutoAplicacao(repositorioFake.Object);
+            var listProdutos = servico.BuscarTodos();
+            repositorioFake.Verify(rep => rep.BuscarTodos());
+
         }
 
         [TestMethod]
@@ -72,7 +93,7 @@ namespace Uniplac.Mercado.Aplicacao.Testes
             Produto produto = new Produto();
             produto.Nome = "Pilsen";
             produto.Preco = 4.90;
-            
+
             var repositorioFake = new Mock<IProdutoRepository>();
             repositorioFake.Setup(x => x.Deletar(produto));
 

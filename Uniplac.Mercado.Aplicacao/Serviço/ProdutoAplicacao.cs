@@ -31,6 +31,11 @@ namespace Uniplac.Mercado.Aplicacao.Serviço
             return produto;
         }
 
+        public List<Produto> BuscarTodos()
+        {
+            return _repositorio.BuscarTodos();
+        }
+
         public Produto CriarProduto(Produto produto)
         {
             return _repositorio.Adicionar(produto);

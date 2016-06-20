@@ -15,5 +15,7 @@ namespace Uniplac.Mercado.Aplicacao.Contrato
         Produto Deletar(Produto produto);
         Produto Busca(int id);
 
+        List<Produto> BuscarTodos();
+
     }
 }

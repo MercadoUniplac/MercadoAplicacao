@@ -24,7 +24,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
         // GET: Produtoes
         public ActionResult Index()
         {
-            return View(db.Produtos.ToList());
+            return View(servico.BuscarTodos());
         }
 
         // GET: Produtoes/Details/5
@@ -34,7 +34,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Produto produto = db.Produtos.Find(id);
+            Produto produto = servico.Busca(id.Value);
             if (produto == null)
             {
                 return HttpNotFound();
