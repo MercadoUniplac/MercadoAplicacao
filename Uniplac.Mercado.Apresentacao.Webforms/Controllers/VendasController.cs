@@ -12,6 +12,7 @@ using Uniplac.Mercado.Infra.Dados.Contexto;
 
 namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
 {
+    [Authorize]
     public class VendasController : Controller
     {
         private MercadoContext db = new MercadoContext();

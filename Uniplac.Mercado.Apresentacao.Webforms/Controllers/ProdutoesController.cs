@@ -15,6 +15,7 @@ using Uniplac.Mercado.Infra.Dados.Repositorios;
 
 namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
 {
+    [Authorize]
     public class ProdutoesController : Controller
     {
         private MercadoContext db = new MercadoContext();
