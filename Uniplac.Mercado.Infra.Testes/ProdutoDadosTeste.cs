@@ -18,14 +18,9 @@ namespace Uniplac.Mercado.Infra.Testes
         public void Initialize()
         {
             Database.SetInitializer(new DropCreateDatabaseAlways<MercadoContext>());
-
             _contextoTeste = new MercadoContext();
-            _repositorio = new ProdutoRepository();
-
             _contextoTeste.Database.Initialize(true);
-
-            _contextoTeste.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
-
+            _repositorio = new ProdutoRepository();
         }
 
         [TestCleanup]

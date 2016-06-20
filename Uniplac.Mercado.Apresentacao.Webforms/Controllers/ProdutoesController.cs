@@ -6,14 +6,19 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Uniplac.Mercado.Aplicacao.Contrato;
+using Uniplac.Mercado.Aplicacao.Serviço;
 using Uniplac.Mercado.Dominio;
+using Uniplac.Mercado.Dominio.Contratos;
 using Uniplac.Mercado.Infra.Dados.Contexto;
+using Uniplac.Mercado.Infra.Dados.Repositorios;
 
 namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
 {
     public class ProdutoesController : Controller
     {
         private MercadoContext db = new MercadoContext();
+        private IProdutoAplicacao servico = new ProdutoAplicacao(new ProdutoRepository());
 
         // GET: Produtoes
         public ActionResult Index()

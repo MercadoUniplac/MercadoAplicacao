@@ -1,0 +1,80 @@
+﻿@model Uniplac.Mercado.Dominio.Venda
+@{
+    ViewBag.Title = "Cadastro de Vendas";
+}
+
+<h2>Cadastro de Vendas</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h5>Preencha os dados abaixo para cadastar a venda.</h5>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <section class="venda-create__data col-xs-12">
+                @Html.LabelFor(model => model.Data, htmlAttributes: new { @class = "control-label col-sm-1" })
+                <div class="col-sm-11">
+                    @Html.EditorFor(model => model.Data, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Data, "", new { @class = "text-danger" })
+                </div>
+            </section>
+            <section class="venda-create__itens-venda col-xs-12">
+                <label class="control-label col-sm-1"> Itens da Venda</label>
+                <div class="col-sm-11">
+                    <input type='submit' class="btn btn-default" value='Adicionar Item de Venda' formaction='@Url.Action("ModifyItemVenda")' />
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Id
+                                </th>
+                                <th>
+                                    Produto
+                                </th>
+                                <th>
+                                    Qtd
+                                </th>
+                                <th>
+                                    Total
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (var i = 0; i < Model.Itens.Count; i++)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.Itens[i].Id)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.Itens[i].Produto.Nome)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.Itens[i].Qtd)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-11">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

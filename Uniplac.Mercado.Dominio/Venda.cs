@@ -14,9 +14,19 @@ namespace Uniplac.Mercado.Dominio
 
         public List<ItemVenda> Itens { get; set; }
 
+        public Venda()
+        {
+            this.Itens = new List<ItemVenda>();
+        }
+
         public double ObterTotalVenda()
         {
-            throw new System.NotImplementedException();
+            double total = 0;
+            foreach (var item in this.Itens)
+            {
+                total += item.ObterSubTotal();
+            }
+            return total;
         }
     }
 }

@@ -7,8 +7,8 @@ C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio.Testes\obj\
 C:\Users\tiora\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio.Testes\obj\Debug\Uniplac.Mercado.Dominio.Testes.pdb
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio.Testes\bin\Debug\Uniplac.Mercado.Dominio.Testes.dll
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio.Testes\bin\Debug\Uniplac.Mercado.Dominio.Testes.pdb
-C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio.Testes\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio.Testes\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio.Testes\obj\Debug\Uniplac.Mercado.Dominio.Testes.csprojResolveAssemblyReference.cache
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio.Testes\obj\Debug\Uniplac.Mercado.Dominio.Testes.dll
 C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio.Testes\obj\Debug\Uniplac.Mercado.Dominio.Testes.pdb
+C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio.Testes\bin\Debug\Uniplac.Mercado.Dominio.dll
+C:\Users\Cliente\Source\Repos\MercadoAplicacao\Uniplac.Mercado.Dominio.Testes\bin\Debug\Uniplac.Mercado.Dominio.pdb
