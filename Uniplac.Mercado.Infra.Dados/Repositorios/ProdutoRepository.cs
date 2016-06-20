@@ -5,14 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using Uniplac.Mercado.Dominio;
 using Uniplac.Mercado.Dominio.Contratos;
+using Uniplac.Mercado.Infra.Dados.Contexto;
 
 namespace Uniplac.Mercado.Infra.Dados.Repositorios
 {
     public class ProdutoRepository : IProdutoRepository
     {
+        private MercadoContext _contexto;
+
+        public ProdutoRepository()
+        {
+            _contexto = new MercadoContext();
+        }
+
         public Produto Adicionar(Produto produto)
         {
-            throw new NotImplementedException();
+            var resultado = _contexto.Produtos.Add(produto);
+            _contexto.SaveChanges();
+            return resultado;
         }
 
         public Produto Atualizar(Produto produto)
@@ -22,12 +32,12 @@ namespace Uniplac.Mercado.Infra.Dados.Repositorios
 
         public Produto Buscar(int id)
         {
-            throw new NotImplementedException();
+            return _contexto.Produtos.Find(id);
         }
 
         public List<Produto> BuscarTodos()
         {
-            throw new NotImplementedException();
+            return _contexto.Produtos.ToList();
         }
 
         public void Deletar(Produto produto)

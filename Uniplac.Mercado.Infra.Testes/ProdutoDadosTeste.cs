@@ -5,6 +5,7 @@ using Uniplac.Mercado.Infra.Dados.Contexto;
 using Uniplac.Mercado.Infra.Dados.Repositorios;
 using Uniplac.Mercado.Dominio;
 using System.Collections.Generic;
+using Uniplac.Mercado.Dominio.Contratos;
 
 namespace Uniplac.Mercado.Infra.Testes
 {
@@ -12,7 +13,7 @@ namespace Uniplac.Mercado.Infra.Testes
     public class ProdutoDadosTeste
     {
         private MercadoContext _contextoTeste;
-        private ProdutoRepository _repositorio;
+        private IProdutoRepository _repositorio;
 
         [TestInitialize]
         public void Initialize()

@@ -7,6 +7,15 @@ namespace Uniplac.Mercado.Dominio
 {
     public class Produto
     {
+        public Produto()
+        {
+
+        }
+        public Produto(string nome, double preco)
+        {
+            nome = Nome;
+            preco = Preco;
+        }
         public int Id { get; set; }
 
         public string Nome { get; set; }
