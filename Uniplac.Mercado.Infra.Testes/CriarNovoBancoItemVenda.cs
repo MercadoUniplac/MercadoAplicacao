@@ -11,7 +11,7 @@ namespace Uniplac.Mercado.Infra.Testes
             for (int i = 0; i < 10; i++)
             {
                 // Criar item venda com o produto
-                ItemVenda itemVenda = new ItemVenda(new Produto("Oreo", 2.99), 10);
+                ItemVenda itemVenda = new ItemVenda(new Produto("Oreo " + i, 2.99 + i), 10);
 
                 // Adicionar no contexto
                 context.ItensVenda.Add(itemVenda);

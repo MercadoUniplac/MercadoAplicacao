@@ -13,7 +13,7 @@ namespace Uniplac.Mercado.Infra.Dados.Contexto
     {
         public MercadoContext() : base("MercadoDB")
         {
-                
+
         }
 
         public DbSet<Produto> Produtos { get; set; }

@@ -18,8 +18,8 @@ namespace Uniplac.Mercado.Infra.Testes
         [TestInitialize]
         public void Initialize()
         {
-            Database.SetInitializer(new CriarNovoBancoProduto<MercadoContext>());
             _contextoTeste = new MercadoContext();
+            Database.SetInitializer(new CriarNovoBancoProduto<MercadoContext>());
             _contextoTeste.Database.Initialize(true);
             _repositorio = new ProdutoRepository();
         }
