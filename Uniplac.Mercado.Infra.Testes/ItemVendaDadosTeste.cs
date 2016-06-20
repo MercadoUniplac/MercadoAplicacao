@@ -5,6 +5,7 @@ using Uniplac.Mercado.Dominio.Contratos;
 using System.Data.Entity;
 using Uniplac.Mercado.Infra.Dados.Repositorios;
 using Uniplac.Mercado.Dominio;
+using System.Linq;
 
 namespace Uniplac.Mercado.Infra.Testes
 {
@@ -39,11 +40,11 @@ namespace Uniplac.Mercado.Infra.Testes
             _repositorio.Adicionar(itemVenda);
 
             // Buscar no banco
-            ItemVenda novoItemVenda = _contextoTeste.ItensVenda.Find(itemVenda.Id);
+            ItemVenda novoItemVenda = _contextoTeste.ItensVenda.Include(itv => itv.Produto).Where(itv => itv.Id == itemVenda.Id).FirstOrDefault();
 
             // Assert
             Assert.IsTrue(novoItemVenda.Id > 0);
-            Assert.AreEqual(novoItemVenda.Produto, produto);
+            Assert.AreEqual(novoItemVenda.Produto.Id, produto.Id);
             Assert.AreEqual(novoItemVenda.Qtd, 3);
         }
     }
