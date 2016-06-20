@@ -13,8 +13,8 @@ namespace Uniplac.Mercado.Dominio
         }
         public Produto(string nome, double preco)
         {
-            nome = Nome;
-            preco = Preco;
+            this.Nome = nome;
+            this.Preco = preco;
         }
         public int Id { get; set; }
 
