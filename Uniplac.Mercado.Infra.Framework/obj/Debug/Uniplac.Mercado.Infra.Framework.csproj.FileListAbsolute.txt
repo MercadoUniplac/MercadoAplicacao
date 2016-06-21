@@ -12,3 +12,8 @@ C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Infra
 C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Infra.Framework\obj\Debug\Uniplac.Mercado.Infra.Framework.csprojResolveAssemblyReference.cache
 C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Infra.Framework\obj\Debug\Uniplac.Mercado.Infra.Framework.dll
 C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Infra.Framework\obj\Debug\Uniplac.Mercado.Infra.Framework.pdb
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Infra.Framework\bin\Debug\Uniplac.Mercado.Infra.Framework.dll
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Infra.Framework\bin\Debug\Uniplac.Mercado.Infra.Framework.pdb
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Infra.Framework\obj\Debug\Uniplac.Mercado.Infra.Framework.csprojResolveAssemblyReference.cache
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Infra.Framework\obj\Debug\Uniplac.Mercado.Infra.Framework.dll
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Infra.Framework\obj\Debug\Uniplac.Mercado.Infra.Framework.pdb

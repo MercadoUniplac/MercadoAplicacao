@@ -12,3 +12,11 @@ C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Domin
 C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.csprojResolveAssemblyReference.cache
 C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.dll
 C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Dominio\bin\Debug\Uniplac.Mercado.Dominio.dll
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Dominio\bin\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.dll
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\guilherme.toniello\Desktop\MercadoAplicacao2\MercadoAplicacao2\Uniplac.Mercado.Dominio\bin\Debug\Uniplac.Mercado.Dominio.dll
+C:\Users\guilherme.toniello\Desktop\MercadoAplicacao2\MercadoAplicacao2\Uniplac.Mercado.Dominio\bin\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\guilherme.toniello\Desktop\MercadoAplicacao2\MercadoAplicacao2\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.dll
+C:\Users\guilherme.toniello\Desktop\MercadoAplicacao2\MercadoAplicacao2\Uniplac.Mercado.Dominio\obj\Debug\Uniplac.Mercado.Dominio.pdb

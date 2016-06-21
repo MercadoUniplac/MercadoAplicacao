@@ -22,7 +22,6 @@ namespace Uniplac.Mercado.Dominio
 
         public int Qtd { get; set; }
 
-
         public double ObterSubTotal()
         {
             if (this.Produto == null)

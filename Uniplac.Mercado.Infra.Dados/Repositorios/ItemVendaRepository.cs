@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using Uniplac.Mercado.Dominio;
 using Uniplac.Mercado.Dominio.Contratos;
 using Uniplac.Mercado.Infra.Dados.Contexto;
@@ -32,12 +33,12 @@ namespace Uniplac.Mercado.Infra.Dados.Repositorios
 
         public ItemVenda Buscar(int id)
         {
-            return _contexto.ItensVenda.Find(id);
+            return _contexto.ItensVenda.Include(itv => itv.Produto).Where(itv => itv.Id == id).FirstOrDefault();
         }
 
         public List<ItemVenda> BuscarTodos()
         {
-            return _contexto.ItensVenda.ToList();
+            return _contexto.ItensVenda.Include(itv => itv.Produto).ToList();
         }
 
         public void Deletar(ItemVenda itemVenda)

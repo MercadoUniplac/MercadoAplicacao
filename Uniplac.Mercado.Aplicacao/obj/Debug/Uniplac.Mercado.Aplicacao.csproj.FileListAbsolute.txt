@@ -26,3 +26,17 @@ C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Aplic
 C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.csprojResolveAssemblyReference.cache
 C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.dll
 C:\Users\guilherme.toniello\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.pdb
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Aplicacao.dll
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Aplicacao.pdb
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Dominio.dll
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.dll
+C:\Users\lab.info\Source\Repos\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.pdb
+C:\Users\guilherme.toniello\Desktop\MercadoAplicacao2\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Aplicacao.dll
+C:\Users\guilherme.toniello\Desktop\MercadoAplicacao2\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Aplicacao.pdb
+C:\Users\guilherme.toniello\Desktop\MercadoAplicacao2\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Dominio.dll
+C:\Users\guilherme.toniello\Desktop\MercadoAplicacao2\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\bin\Debug\Uniplac.Mercado.Dominio.pdb
+C:\Users\guilherme.toniello\Desktop\MercadoAplicacao2\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\guilherme.toniello\Desktop\MercadoAplicacao2\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.dll
+C:\Users\guilherme.toniello\Desktop\MercadoAplicacao2\MercadoAplicacao2\Uniplac.Mercado.Aplicacao\obj\Debug\Uniplac.Mercado.Aplicacao.pdb

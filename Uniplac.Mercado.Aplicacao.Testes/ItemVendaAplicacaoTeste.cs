@@ -12,7 +12,7 @@ using Uniplac.Mercado.Dominio.Contratos;
 
 namespace Uniplac.Mercado.Aplicacao.Testes
 {
-   public class ItemVendaAplicacaoTeste
+    public class ItemVendaAplicacaoTeste
     {
         [TestMethod]
 
@@ -21,7 +21,7 @@ namespace Uniplac.Mercado.Aplicacao.Testes
             //Monta objeto
             ItemVenda itemVenda = new ItemVenda();
             itemVenda.Produto = new Produto();
-            itemVenda.Qtd=2;
+            itemVenda.Qtd = 2;
 
             var repositorioFake = new Mock<IItemVendaRepository>();
             repositorioFake.Setup(x => x.Atualizar(itemVenda)).Returns(itemVenda);
@@ -46,6 +46,8 @@ namespace Uniplac.Mercado.Aplicacao.Testes
             repositorioFake.Setup(x => x.Adicionar(itemVenda)).Returns(new ItemVenda());
 
             IItemVendaAplicacao servico = new ItemVendaAplicacao(repositorioFake.Object);
+            servico.CriarItemVenda(itemVenda);
+            repositorioFake.Verify(x => x.Adicionar(itemVenda));
 
         }
 
@@ -55,7 +57,7 @@ namespace Uniplac.Mercado.Aplicacao.Testes
             //Monta objeto
             ItemVenda itemVenda = new ItemVenda();
             itemVenda.Produto = new Produto();
-            itemVenda.Qtd= 4;
+            itemVenda.Qtd = 4;
 
 
             var repositorioFake = new Mock<IItemVendaRepository>();
@@ -64,8 +66,29 @@ namespace Uniplac.Mercado.Aplicacao.Testes
                 Produto = itemVenda.Produto,
                 Qtd = itemVenda.Qtd,
                 Id = 1
-                
+
             });
+            IItemVendaAplicacao servico = new ItemVendaAplicacao(repositorioFake.Object);
+            servico.Busca(1);
+            repositorioFake.Verify(x => x.Buscar(1));
+        }
+
+
+        [TestMethod]
+        public void BuscaItemVendaTodosAplicacaoTeste()
+        {
+            //Monta objeto
+            ItemVenda itemVenda = new ItemVenda();
+            itemVenda.Produto = new Produto();
+            itemVenda.Qtd = 4;
+
+            var repositorioFake = new Mock<IItemVendaRepository>();
+            repositorioFake.Setup(x => x.BuscarTodos()).Returns(new List<ItemVenda>(){
+                itemVenda
+            });
+            IItemVendaAplicacao servico = new ItemVendaAplicacao(repositorioFake.Object);
+            servico.BuscaTodos();
+            repositorioFake.Verify(rep => rep.BuscarTodos());
         }
 
         [TestMethod]

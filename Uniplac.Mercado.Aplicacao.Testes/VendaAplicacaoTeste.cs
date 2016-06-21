@@ -53,18 +53,34 @@ namespace Uniplac.Mercado.Aplicacao.Testes
         public void BuscaVendaAplicacaoTeste()
         {
             //Monta objeto
-            Venda venda = new Venda();
-            venda.Itens = new List<ItemVenda>();
-            venda.Data = new DateTime();
-
-
             var repositorioFake = new Mock<IVendaRepository>();
             repositorioFake.Setup(x => x.Buscar(1)).Returns(new Venda()
             {
-                Itens = venda.Itens,
-                Data = venda.Data,
+                Itens = new List<ItemVenda>(),
+                Data = new DateTime(),
                 Id = 1
             });
+            IVendaAplicacao servico = new VendaAplicacao(repositorioFake.Object);
+            servico.Busca(1);
+            repositorioFake.Verify(x => x.Buscar(1));
+
+        }
+
+        [TestMethod]
+        public void BuscaVendaTodosAplicacaoTeste()
+        {
+            //Monta objeto
+            var repositorioFake = new Mock<IVendaRepository>();
+            repositorioFake.Setup(x => x.BuscarTodos()).Returns(new List<Venda>(){ 
+                new Venda() {
+                    Itens = new List<ItemVenda>(),
+                    Data = DateTime.Now,
+                    Id = 1
+                }
+            });
+            IVendaAplicacao servico = new VendaAplicacao(repositorioFake.Object);
+            servico.BuscarTodos();
+            repositorioFake.Verify(x => x.BuscarTodos());
         }
 
         [TestMethod]
@@ -80,9 +96,7 @@ namespace Uniplac.Mercado.Aplicacao.Testes
 
             IVendaAplicacao servico = new VendaAplicacao(repositorioFake.Object);
             Venda vendaDeletada = servico.Deletar(venda);
-
             repositorioFake.Verify(x => x.Deletar(vendaDeletada));
-
         }
 
 

@@ -14,5 +14,8 @@ namespace Uniplac.Mercado.Aplicacao.Contrato
         ItemVenda Atualizar(ItemVenda itemVenda);
         ItemVenda Deletar(ItemVenda itemVenda);
         ItemVenda Busca(int id);
+
+        List<ItemVenda> BuscaTodos();
+
     }
 }

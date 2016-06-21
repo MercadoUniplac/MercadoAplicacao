@@ -36,7 +36,7 @@ namespace Uniplac.Mercado.Infra.Dados.Repositorios
 
         public Produto Buscar(int id)
         {
-            return _contexto.Produtos.Find(id);
+            return _contexto.Produtos.AsNoTracking().Where(p => p.Id == id).FirstOrDefault();
         }
 
         public List<Produto> BuscarTodos()

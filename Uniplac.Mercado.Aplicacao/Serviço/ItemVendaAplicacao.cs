@@ -42,5 +42,9 @@ namespace Uniplac.Mercado.Aplicacao.Serviço
             return itemVenda;
         }
 
+        public List<ItemVenda> BuscaTodos()
+        {
+            return _repositorio.BuscarTodos();
+        }
     }
 }

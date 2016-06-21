@@ -6,21 +6,27 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Uniplac.Mercado.Aplicacao.Contrato;
+using Uniplac.Mercado.Aplicacao.Serviço;
 using Uniplac.Mercado.Apresentacao.Webforms.Models;
 using Uniplac.Mercado.Dominio;
+using Uniplac.Mercado.Dominio.Contratos;
 using Uniplac.Mercado.Infra.Dados.Contexto;
+using Uniplac.Mercado.Infra.Dados.Repositorios;
 
 namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
 {
     [Authorize]
     public class VendasController : Controller
     {
-        private MercadoContext db = new MercadoContext();
+        private IVendaAplicacao servico = new VendaAplicacao(new VendaRepository());
+        private IItemVendaAplicacao servicoItemVenda = new ItemVendaAplicacao(new ItemVendaRepository());
+        private IProdutoAplicacao servicoProduto = new ProdutoAplicacao(new ProdutoRepository());
 
         // GET: Vendas
         public ActionResult Index()
         {
-            return View(db.Venda.Include(v => v.Itens).ToList());
+            return View(servico.BuscarTodos());
         }
 
         // GET: Vendas/Details/5
@@ -30,12 +36,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Venda venda = db.Venda.Include(v => v.Itens).Where(v => v.Id == id).FirstOrDefault();
-            for (int i = 0; i < venda.Itens.Count; i++)
-            {
-                var idItem = venda.Itens[i].Id;
-                venda.Itens[i] = db.ItensVenda.Include(itv => itv.Produto).Where(itv => itv.Id == idItem).FirstOrDefault();
-            }
+            Venda venda = servico.Busca(id.Value);  
             if (venda == null)
             {
                 return HttpNotFound();
@@ -62,11 +63,13 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
                 var venda = vendaModel.Venda;
                 for (int i = 0; i < vendaModel.NumItemVenda; i++)
                 {
-                    var produto = db.Produtos.Find(int.Parse(vendaModel.Produtos[i]));
+                    var produto = new Produto()
+                    {
+                        Id = int.Parse(vendaModel.Produtos[i])
+                    }; 
                     venda.Itens.Add(new ItemVenda(produto, int.Parse(vendaModel.Qtds[i].Value)));
                 }
-                db.Venda.Add(venda);
-                db.SaveChanges();
+                servico.CriarVenda(venda);
                 return RedirectToAction("Index");
             }
             return View(vendaModel);
@@ -78,7 +81,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
             if (venda == null)
                 return RedirectToAction("Index");
             venda.Itens[venda.Itens.Count - 1].Qtd = itemVendaModel.Qtd;
-            venda.Itens[venda.Itens.Count - 1].Produto = db.Produtos.Find(int.Parse(itemVendaModel.IdProdutoSelecionado));
+            venda.Itens[venda.Itens.Count - 1].Produto = servicoProduto.Busca(int.Parse(itemVendaModel.IdProdutoSelecionado));
             return View(new VendaModel(venda));
 
         }
@@ -90,7 +93,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Venda venda = db.Venda.Find(id);
+            Venda venda = servico.Busca(id.Value);
             if (venda == null)
             {
                 return HttpNotFound();
@@ -103,7 +106,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
             if (venda == null)
                 return RedirectToAction("Index");
             venda.Itens.Add(new ItemVenda());
-            var model = new ModifyItemVendaModel(venda, db.Produtos.ToList());
+            var model = new ModifyItemVendaModel(venda, servicoProduto.BuscarTodos());
             return View(model);
         }
 
@@ -113,11 +116,11 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
                 return RedirectToAction("Index");
             for (int i = 0; i < vendaModel.NumItemVenda; i++)
             {
-                var produto = db.Produtos.Find(int.Parse(vendaModel.Produtos[i]));
+                var produto = servicoProduto.Busca(int.Parse(vendaModel.Produtos[i]));
                 vendaModel.Venda.Itens.Add(new ItemVenda(produto, int.Parse(vendaModel.Qtds[i].Value)));
             }
             vendaModel.Venda.Itens.Add(new ItemVenda());
-            var model = new ModifyItemVendaModel(vendaModel.Venda, db.Produtos.ToList());
+            var model = new ModifyItemVendaModel(vendaModel.Venda, servicoProduto.BuscarTodos());
             return View(model);
         }
 
@@ -131,8 +134,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(venda).State = EntityState.Modified;
-                db.SaveChanges();
+                servico.Atualizar(venda);
                 return RedirectToAction("Index");
             }
             return View(venda);
@@ -145,7 +147,7 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Venda venda = db.Venda.Find(id);
+            Venda venda = servico.Busca(id.Value);
             if (venda == null)
             {
                 return HttpNotFound();
@@ -158,19 +160,9 @@ namespace Uniplac.Mercado.Apresentacao.Webforms.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Venda venda = db.Venda.Find(id);
-            db.Venda.Remove(venda);
-            db.SaveChanges();
+            Venda venda = servico.Busca(id);
+            servico.Deletar(venda);
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }
